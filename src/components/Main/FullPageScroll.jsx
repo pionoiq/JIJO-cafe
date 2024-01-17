@@ -1,4 +1,4 @@
-import { Dots } from "@/components/Main/Dots";
+// import { Dots } from "@/components/Main/Dots";
 import { useRef, useState, useEffect } from "react";
 
 const FullPageScroll = ({ children, onLoad = () => {}, onPageChange = () => {} }) => {
@@ -104,18 +104,18 @@ const FullPageScroll = ({ children, onLoad = () => {}, onPageChange = () => {} }
     };
   }, []);
 
-  const movePageTo = (index) => {
-    const num = currentPage.current;
-    if (index > num) for (let i = 0; i < index - num; i++) scrollDown();
-    else if (index < num) for (let i = 0; i < num - index; i++) scrollUp();
-  };
+  // const movePageTo = (index) => {
+  //   const num = currentPage.current;
+  //   if (index > num) for (let i = 0; i < index - num; i++) scrollDown();
+  //   else if (index < num) for (let i = 0; i < num - index; i++) scrollUp();
+  // };
 
   return (
     <>
       <div ref={outerDivRef} style={{ height: "100vh", width: "100%", overflowY: "hidden" }}>
         {children}
       </div>
-      <Dots limit={outerDivRef.current?.childElementCount || 0} currentIndex={currentPage.current} onDotClick={movePageTo} />
+      {/* <Dots limit={outerDivRef.current?.childElementCount || 0} currentIndex={currentPage.current} onDotClick={movePageTo} /> */}
     </>
   );
 };
