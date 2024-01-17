@@ -72,6 +72,22 @@
     @apply mobile:opacity-10;
   }
 
+  /* 메인-mainNavigation css */
+
+  /* .mainPageNav {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    cursor: pointer;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 0.8rem;
+  } */
+
   /* 이벤트 페이지 tab css */
 
   .select {

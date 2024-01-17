@@ -1,8 +1,8 @@
-import {useState} from "react";
-import {useEffect} from "react";
-import {useRef} from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import { useRef } from "react";
 
-function LazyImage({src, alt, className, width = "auto", height = "auto"}) {
+function LazyImage({ src, alt, className, width = "auto", height = "auto" }) {
   const [isLoading, setLoading] = useState(false);
 
   const imgRef = useRef(null);
@@ -23,15 +23,8 @@ function LazyImage({src, alt, className, width = "auto", height = "auto"}) {
   }, []);
 
   return (
-    <div className="aspect-video w-fit">
-      <img
-        width={width}
-        height={height}
-        ref={imgRef}
-        src={isLoading ? src : null}
-        alt={alt}
-        className={className}
-      />
+    <div className="w-full">
+      <img width={width} height={height} ref={imgRef} src={isLoading ? src : null} alt={alt} className={className} />
     </div>
   );
 }

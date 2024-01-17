@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Keyboard } from "swiper/modules";
 import { getPbImageURL } from "@/utils/getPbImageURL";
 
-export default function ShopingMallCarousel() {
+function GoodsCarousel() {
   const { data, isError, error } = useQuery({
     queryKey: ["mainProduct"],
     queryFn: async () => {
@@ -72,3 +72,4 @@ export default function ShopingMallCarousel() {
     </Swiper>
   );
 }
+export default GoodsCarousel;

@@ -1,11 +1,11 @@
 import Button from "@/components/Button";
 import MainpageTitle from "@/components/Main/MainpageTitle";
 import { Link } from "react-router-dom";
-import ShopingMallCarousel from "@/components/Main/ShopingMallCarousel";
+import GoodsCarousel from "@/components/Main/GoodsCarousel";
 import nextArrow from "../../assets/images/main/nextArrow.png";
 import { MainPageText1, MainPageText2 } from "@/components/Main/MainPageText";
 
-function MainShopingMall({ className }) {
+function MainGoods({ className }) {
   const content1 = ["카페 지조가 추천하는 제품들을 둘러보세요!"];
   const content2 = ["지조 MD가 직접 선정하는 다양한 제품들을", "합리적인 가격으로 만나보실 수 있습니다."];
   return (
@@ -13,7 +13,7 @@ function MainShopingMall({ className }) {
       <h2 className="sr-only">메인페이지 쇼핑몰</h2>
       <div className="px-20 text-deepDarkGray mobile:pl-5">
         <div>
-          <MainpageTitle highLight="secondaryHighlight" subHeading="지조 있게 추천하는 제품" mainHeading="CAFE JIJO SHOPING MALL"></MainpageTitle>
+          <MainpageTitle highLight="secondaryHighlight" subHeading="지조 있게 추천하는 제품" mainHeading="CAFE JIJO MD's PICK"></MainpageTitle>
           <MainPageText1 text={content1} />
           <MainPageText2 text={content2} />
           <Link to="/menu/product" className="outline-white">
@@ -37,11 +37,11 @@ function MainShopingMall({ className }) {
               </button>
             </Link>
           </div>
-          <ShopingMallCarousel />
+          <GoodsCarousel />
         </div>
       </div>
     </section>
   );
 }
 
-export default MainShopingMall;
+export default MainGoods;
